@@ -1,0 +1,1292 @@
+/* Imported local fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+@font-face {
+	font-family: StRey;
+	src: url('/fonts/StRey.otf');
+}
+
+@font-face {
+	font-family: GallantRegular;
+	src: url('/fonts/Gallant-regular.otf');
+}
+
+@font-face {
+	font-family: GallantRegularItalic;
+	src: url('/fonts/Gallant-regular-italic.otf');
+}
+
+@font-face {
+	font-family: GallantBold;
+	src: url('/fonts/Gallant-bold.otf');
+}
+
+html,
+body {
+	min-height: 100vh;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+p,
+li {
+	line-height: 1.5;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* variables */
+:root {
+	--text-dark: #000;
+	--text-light: #fff;
+	--text-accent: blue;
+	--text-gold: #ffd700;
+	--text-link: #e06a22;
+	--text-shadow: #605f60;
+	--hover: #aa4100;
+	--bg-light: #fff;
+	--bg-dark: #000;
+	--bg-light-gray: rgb(228, 226, 226);
+	--bg-dark-gray: rgb(153, 153, 153);
+	--box-shadow: 5px 5px 5px darkgray;
+	--main-accent: #078b8f;
+	--main-accent-light: #37d7db;
+}
+
+/* backgrounds colors */
+.bg-light {
+	background-color: var(--bg-light);
+}
+
+.bg-orange {
+	background-color: var(--text-link);
+}
+
+/* home screen */
+header.bg-bible-1 {
+	height: 100vh;
+	background-image: linear-gradient(
+			to bottom right,
+			rgba(7, 139, 143, 0.3),
+			rgba(55, 215, 219, 0.3)
+		),
+		url('/bg-bible-1.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+div.home-text {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-shadow: 3px 3px 3px var(--main-accent);
+}
+
+div.home-text h1 {
+	color: var(--text-light);
+	font-size: 13vw;
+	font-family: StRey;
+	letter-spacing: 0.2rem;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 800px;
+	padding-bottom: 1rem;
+}
+
+.container-full {
+	display: flex;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.container-fluid {
+	min-width: 100%;
+	margin-bottom: 5rem;
+}
+
+.container-mid {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+/* lecturas responsive layout */
+@media (max-width: 1000px) {
+	.container-full {
+		flex-direction: column;
+		max-width: 900px;
+		margin: auto;
+	}
+
+	section.w-70 {
+		width: 100%;
+	}
+
+	aside.w-30 {
+		width: 100%;
+	}
+
+	div.lectura-list-image {
+		display: none;
+	}
+}
+
+.w-30 {
+	width: 30%;
+}
+
+.w-70 {
+	width: 70%;
+}
+
+/* buttons */
+a.btn-link {
+	color: var(--text-link);
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+a.btn-link:hover {
+	color: var(--hover);
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+a.btn-link:active {
+	color: var(--hover);
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+a.btn-primary {
+	color: var(--text-light);
+	background-color: var(--text-link);
+	border: 3px solid var(--text-link);
+	padding: 8px 24px;
+	border-radius: 4px;
+	margin: 0.5rem;
+	transition: all 0.2s;
+}
+
+a.btn-primary:hover {
+	cursor: pointer;
+	color: var(--text-link);
+	background-color: var(--text-light);
+	border: 3px solid var(--text-light);
+}
+
+a.btn-secondary {
+	color: var(--text-link);
+	background-color: var(--text-light);
+	border: 3px solid var(--text-link);
+	padding: 8px 24px;
+	border-radius: 4px;
+	margin: 0.5rem;
+	transition: all 0.2s;
+}
+
+a.btn-secondary:hover {
+	cursor: pointer;
+	color: var(--text-light);
+	background-color: var(--text-link);
+	border: 3px solid var(--text-link);
+}
+
+.logout {
+	cursor: pointer;
+	color: var(--text-link);
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+button.btn-primary {
+	color: var(--text-light);
+	background-color: var(--text-link);
+	border: 3px solid var(--text-link);
+	padding: 8px 24px;
+	border-radius: 4px;
+	margin: 0.5rem;
+	transition: all 0.2s;
+}
+
+button.btn-primary:hover {
+	cursor: pointer;
+	color: var(--text-link);
+	background-color: var(--text-light);
+	border: 3px solid var(--text-light);
+}
+
+/* lists */
+ol,
+ul {
+	margin-left: 0.5rem;
+}
+
+ol li {
+	margin-left: 1.5rem;
+}
+
+li {
+	margin: 0;
+}
+
+li span {
+	font-size: 1rem !important;
+	font-family: GallantRegular !important;
+}
+
+ol,
+ul,
+li:nth-last-child(1) {
+	margin-bottom: 1rem;
+}
+
+/* blockquote */
+
+blockquote {
+	margin-left: 2rem;
+	margin-bottom: 1rem;
+	border-left: 0.5rem solid var(--text-link);
+	padding: 0.5rem;
+}
+
+blockquote p {
+	margin: 0;
+	line-height: 1.5;
+}
+
+blockquote p span {
+	margin-left: 1rem !important;
+	font-family: GallantRegularItalic !important;
+	font-size: 1rem !important;
+}
+
+/* index header */
+.index-header {
+	display: flex;
+	align-items: center;
+	background-color: var(--main-accent);
+	height: 100vh;
+	background-image: url('/lens-flare.png');
+	background-position: top right;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-blend-mode: lighten;
+}
+
+.index-header__left {
+	flex-basis: 30%;
+	height: 100%;
+	background-image: url('/praying-hands-1.png');
+	background-position: bottom left;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.index-header__right {
+	flex-basis: 70%;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.index-header__right h1 {
+	color: var(--text-gold);
+	font-size: 9vw;
+	font-family: StRey;
+	letter-spacing: 0.2rem;
+	text-shadow: 3px 3px 5px var(--text-shadow);
+}
+
+.index-header p {
+	color: var(--text-light);
+}
+
+.index-header__btns {
+	width: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 760px) {
+	.index-header {
+		flex-direction: column-reverse;
+		flex-basis: auto;
+		height: 100vh;
+	}
+
+	.index-header__left {
+		flex-basis: 40%;
+		width: 100%;
+	}
+
+	.index-header__right {
+		flex-basis: auto;
+	}
+
+	.index-header__right h1 {
+		font-size: 13vw;
+	}
+}
+
+@media (max-width: 450px) {
+	.index-header__btns {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.index-header__left {
+		flex-basis: 30%;
+		width: 100%;
+	}
+}
+
+/* lecturas */
+.lecturas-header {
+	height: 20vh;
+	/* background-image: linear-gradient(to bottom right, rgba(7, 139, 143, .3), rgba(55, 215, 219, .3)), url("/bg-bible-1.jpg"); */
+	background-image: linear-gradient(
+		to top,
+		var(--main-accent),
+		var(--main-accent-light)
+	);
+	background-position: bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: var(--text-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lecturas {
+	margin-right: 1rem;
+}
+
+.lectura-list-container {
+	background-color: var(--bg-light);
+	box-shadow: 1px 1px 5px var(--bg-light-gray);
+	border: 1px solid var(--main-accent);
+  border-radius: 4px;
+	margin-bottom: 1rem;
+	display: flex;
+	transition: all 0.2s;
+}
+
+.lectura-list-container div.data {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	color: darkgray;
+	margin: 0.2rem 0 0.5rem;
+}
+
+@media (max-width: 680px) {
+	.lectura-list-container div.data {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	div.data > .divisor {
+		display: none;
+	}
+}
+
+.lectura-list-container a {
+	color: var(--text-link);
+	text-decoration: none;
+}
+
+div.lectura-list-image {
+	flex-basis: 25%;
+	background-color: var(--main-accent);
+}
+
+div.lectura-list-image img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+div.lectura-list-body {
+	/* flex-basis: 75%; */
+	flex-basis: 100%;
+}
+
+.guardar-lectura {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-top: none;
+	border-bottom: 1px solid var(--main-accent);
+	border-left: 1px solid var(--main-accent);
+	border-right: 1px solid var(--main-accent);
+	margin-bottom: 5rem;
+}
+
+.guardar-lectura svg,
+.guardar-lectura p {
+	color: var(--bg-dark-gray);
+	fill: var(--main-accent);
+}
+
+.guardar-lectura svg {
+	cursor: pointer;
+}
+
+span.indicador-categoria {
+	color: var(--main-accent);
+}
+/* lectura single plantilla */
+.lectura-single-container {
+	background-color: var(--bg-light);
+	border-right: 1px solid var(--main-accent);
+	border-left: 1px solid var(--main-accent);
+	border-bottom: none;
+}
+
+/* plantilla lectura */
+header.lectura-header {
+	position: relative;
+	height: 20vh;
+	color: var(--text-light);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 0.5rem;
+}
+
+header.lectura-header img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20vh;
+	object-fit: cover;
+}
+
+.lectura-header-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+		to top,
+		var(--main-accent),
+		var(--main-accent-light)
+	);
+}
+
+.lectura-title {
+	background-color: var(--main-accent);
+	padding: 0.5rem 1rem;
+	color: var(--text-light);
+}
+
+.lectura-header-content h1 {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+header.lectura-header div.lectura-header-content {
+	width: 100%;
+	z-index: 99;
+	color: white;
+}
+
+div.lectura-header-content svg {
+	fill: var(--text-light);
+	z-index: 99;
+	margin-right: 0.5rem;
+	width: 1rem;
+	height: auto;
+}
+
+div.lectura-header-content-data {
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+div.lectura-header-content-data-date,
+div.lectura-header-content-data-author {
+	display: flex;
+	align-items: center;
+	margin: 0 0 1rem 0;
+}
+
+.lectura-header-content-data-author span a {
+	color: var(--text-link);
+	text-decoration: none;
+}
+
+/* libros */
+
+.libros {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1rem;
+}
+
+.libros a {
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 0.2rem;
+	color: black;
+	font-weight: 500;
+	box-shadow: 3px 3px 15px lightgray;
+	background-color: var(--text-light);
+}
+
+.libros a.pentateuco {
+	background-color: #cc8888;
+}
+
+.libros a.historicos {
+	background-color: #e5ccb7;
+}
+
+.libros a.poeticos {
+	background-color: #d6b7ed;
+}
+
+.libros a.profetas {
+	background-color: #9aade2;
+}
+
+.libros a.evangelicos {
+	background-color: #ffcc44;
+}
+
+.libros a.historicos {
+	background-color: #e5a173;
+}
+
+.libros a.cartas {
+	background-color: #a2ccc5;
+}
+
+.libros a.revelaciones {
+	background-color: #8fb5cc;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+nav {
+	width: 100%;
+	background-color: var(--bg-dark);
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+}
+
+nav ul img {
+	height: 40px;
+	width: auto;
+}
+
+nav div img {
+	height: 40px;
+	width: auto;
+}
+
+nav ul li a {
+	display: flex;
+	align-items: center;
+}
+nav ul li {
+	list-style-type: none;
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	color: var(--bg-light);
+	text-transform: uppercase;
+}
+
+@media (max-width: 530px) {
+	div.nav-logo {
+		display: none;
+	}
+}
+
+@media (max-width: 460px) {
+	.nav-icon {
+		display: none;
+	}
+}
+
+div.nav-bottom {
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 0;
+	z-index: 99;
+}
+
+div.nav-bottom-links-container {
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: rgba(0, 0, 0, 0.95);
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	box-shadow: 0.1px 0.1px 10px rgba(255, 255, 255, 0.03),
+		-0.1px -0.1px 10px rgba(255, 255, 255, 0.03);
+}
+
+.nav-bottom-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: 0 1rem;
+}
+
+.nav-bottom-link svg {
+	fill: var(--text-light);
+	margin-bottom: 0.12rem;
+}
+
+div.nav-bottom-link a {
+	text-decoration: none;
+	color: var(--text-light);
+	transition: all 0.2s;
+	font-size: small;
+}
+
+.nav-bottom-link a:hover {
+	text-decoration: none;
+	color: var(--text-link);
+	transition: all 0.2s;
+}
+
+div.nav-bottom-link a.active {
+	color: var(--text-link);
+}
+
+svg.active {
+	fill: var(--text-link);
+	transition: all 0.2s;
+}
+
+/* contenido de la biblia */
+
+p.p {
+	margin: 1rem 0;
+}
+
+p.q {
+	margin: 1rem 0;
+}
+
+p.s {
+	text-transform: uppercase;
+	font-weight: 600;
+	background-color: var(--bg-light-gray);
+	padding: 0.2rem;
+}
+
+span.v {
+	font-size: 10px;
+	margin-right: 1rem;
+	display: block;
+}
+
+h1.biblia-header {
+	padding: 2rem 0 1rem 0.5rem;
+}
+
+h1.biblia-contenido-header {
+	padding: 2rem 0 1rem 0.3rem;
+}
+
+h2.biblia-libro-indicador {
+	margin: 1rem 0 1rem 0.5rem;
+	color: gray;
+}
+
+div img.biblia-libro-imagen {
+	width: 50px;
+	margin-left: 0.5rem;
+}
+
+/* card */
+.card {
+	background-color: var(--bg-light);
+	margin: 0 0.5rem;
+}
+
+/* pagination */
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--bg-light);
+	padding: 1rem;
+	margin: 2em 0 2rem 0;
+}
+
+/* search bar */
+.search a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--text-light);
+}
+
+.search input {
+	min-width: 300px;
+	max-width: 400px;
+	margin-left: 0.5rem;
+}
+
+button.search-btn {
+	cursor: pointer;
+	width: 100px;
+	margin-right: 0.5rem;
+}
+
+.biblia-resultados {
+	min-height: 50vh;
+}
+
+/* spacing */
+
+.ma1 {
+	margin: 1rem;
+}
+
+.m0 {
+	margin: 0;
+}
+
+.mt1 {
+	margin-top: 0.3rem;
+}
+
+.mt2 {
+	margin-top: 0.5rem;
+}
+
+.mt3 {
+	margin-top: 1rem;
+}
+
+.mr2 {
+	margin-right: 0.5rem;
+}
+
+.mr3 {
+	margin-right: 1rem;
+}
+
+.mb0 {
+	margin-bottom: 0;
+}
+
+.mb2 {
+	margin-bottom: 0.5rem;
+}
+
+.mb3 {
+	margin-bottom: 1rem;
+}
+
+.ml2 {
+	margin-left: 0.5rem;
+}
+
+.ml3 {
+	margin-left: 1rem;
+}
+
+.mt5 {
+	margin-top: 3rem;
+}
+
+.pa1 {
+	padding: 1rem;
+}
+
+.p1 {
+	padding: 0.2rem;
+}
+
+.p2 {
+	padding: 0.5rem;
+}
+
+.p3 {
+	padding: 1rem;
+}
+
+.py3 {
+	padding: 0 1rem;
+}
+
+.px3 {
+	padding: 1rem 0;
+}
+
+/* alerts */
+
+.global-alert {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 99;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0.3rem;
+}
+
+.alert-modal-remove {
+	margin: 0 0.5rem 0.5rem auto;
+	fill: var(--text-light);
+	cursor: pointer;
+}
+
+.alert-red {
+	max-width: 800px;
+	margin: 0 auto 1rem auto;
+	padding: 1rem;
+	background-color: red;
+	color: var(--text-light);
+  border: 1px solid black;
+	display: flex;
+	align-items: center;
+}
+
+.alert-white {
+	max-width: 800px;
+  min-width: 400px;
+	margin: 0 auto 1rem auto;
+	padding: 1rem;
+	background-color: var(--bg-light);
+  border: 1px solid black;
+	color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.alert-white input {
+  padding: .5rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.alert-green {
+	max-width: 800px;
+	margin: 0 auto 1rem auto;
+	padding: 1rem;
+	background-color: green;
+	color: var(--text-light);
+	display: flex;
+	align-items: center;
+}
+
+.alert-red button {
+	cursor: pointer;
+	margin: 1rem auto 0 0;
+	padding: 0.5rem 1rem;
+	color: var(--text-dark);
+	background-color: var(--bg-light);
+	border: 1px solid black;
+
+}
+
+.alert-red p {
+	margin: 0;
+}
+
+/* categorias */
+
+aside.aside {
+	background-color: var(--bg-light);
+	margin-bottom: 1rem;
+}
+
+aside div > ul li {
+	list-style-type: none;
+	margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+aside div > ul li > a {
+	text-decoration: none;
+	color: var(--text-link);
+}
+
+/* categorias y recientes */
+aside div ul {
+	margin: 0;
+}
+
+aside div > ul li {
+	list-style-type: none;
+	margin: 0.5rem 0 0.5rem 0;
+}
+
+aside div > ul li > a {
+	text-decoration: none;
+	color: var(--text-link);
+}
+
+/* borders */
+
+.ba {
+	border: 1px solid lightgrey;
+}
+
+/* forms */
+
+.search > .flex > button {
+	margin-left: 0;
+}
+
+form > div,
+hr {
+	width: 100%;
+	margin: 1rem auto;
+}
+
+form div input,
+form div select,
+form div textarea {
+	width: 100%;
+	padding: 0.5rem;
+}
+
+form button {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	padding: 0.6rem;
+	background-color: var(--main-accent);
+	color: var(--text-light);
+	border: 1px solid var(--text-dark);
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+form button:hover {
+	background-color: var(--hover);
+	transition: all 0.2s;
+}
+
+form button svg {
+	fill: var(--text-light);
+	margin-right: 0.5rem;
+}
+
+form.container {
+	margin-bottom: 5rem;
+}
+
+/* Perfil */
+
+.perfil-acciones-wrapper {
+	margin: 0.8rem;
+}
+
+.perfil-acciones {
+	background-color: var(--main-accent);
+	color: var(--text-light);
+	margin: 1rem 1rem 0 1rem;
+	padding: 0.8rem;
+}
+
+.perfil-acciones-sub {
+	background-color: var(--bg-light);
+	margin: 0;
+}
+
+.perfil-acciones-edit-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--bg-light);
+	padding: 1rem 0.8rem 0.8rem 0.8rem;
+	border-bottom: 1px solid var(--bg-light-gray);
+	margin: 0 0.5rem;
+}
+
+@media (max-width: 600px) {
+	.perfil-acciones-edit-container {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	div.perfil-acciones-btn-container {
+		margin-top: 1rem;
+		align-items: flex-start;
+	}
+}
+
+.perfil-acciones-edit-container:last-child {
+	padding-bottom: 0.8rem;
+}
+
+.perfil-acciones-btn-container {
+	display: flex;
+	align-items: center;
+}
+
+.perfil-acciones-btn-container > button {
+	cursor: pointer;
+	border: none;
+	padding: 0.5rem 1rem;
+	margin: 0 1rem;
+}
+
+.perfil-acciones-btn-container > a.editar,
+.perfil-acciones-btn-container > svg {
+	background-color: yellow;
+	font-size: 14px;
+	border: 1px solid var(--text-dark);
+	fill: var(--text-dark);
+	color: var(--text-dark);
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	margin: 0;
+}
+
+.perfil-acciones-btn-container > button.eliminar {
+	background-color: red;
+	font-size: 14px;
+	border: 1px solid var(--text-dark);
+	color: var(--text-light);
+	display: flex;
+	align-items: center;
+}
+
+.perfil-acciones-btn-container > button.editar {
+	background-color: yellow;
+	font-size: 14px;
+	border: 1px solid var(--text-dark);
+	color: var(--text-dark);
+	display: flex;
+	align-items: center;
+}
+
+.perfil-acciones-box {
+	display: flex;
+	align-items: center;
+	padding: 1rem 0.8rem 0.8rem 0.8rem;
+	border-bottom: 1px solid var(--bg-light-gray);
+  margin: 0 .5rem
+}
+
+.perfil-acciones-box:last-child {
+	margin-bottom: 0.8rem;
+}
+
+.perfil-acciones-box svg,
+a {
+	color: var(--text-link);
+	fill: var(--text-link);
+	text-decoration: none;
+}
+
+/* footer */
+footer {
+	background-color: var(--main-accent-light);
+}
+
+.footer {
+	margin: 0 auto;
+	max-width: 800px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+footer .footer-info {
+	flex-basis: 50%;
+	color: var(--text-dark);
+}
+
+footer .footer-links {
+	flex-basis: 50%;
+}
+
+@media (max-width: 475px) {
+	.footer {
+		flex-direction: column;
+	}
+}
+
+footer ul li {
+	list-style-type: none;
+}
+
+.footer-copyrights {
+	margin: 0 auto;
+	max-width: 800px;
+	padding-bottom: 5rem;
+	text-align: center;
+}
+
+/* mailchimp form */
+.mailchimp-form {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.mailchimp-input-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+	.mailchimp-input-container {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.form-input-group-mailchimp {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+
+.form-input-group-mailchimp {
+	flex-basis: 40%;
+}
+
+/* subscribe mailchimp modal */
+.subscribe__modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.subscribe__modal-wrapper {
+	position: relative;
+	background-color: var(--main-accent);
+	max-width: 800px;
+	border: 3px solid var(--text-light);
+	color: var(--text-light);
+}
+
+.subscribe__modal-image {
+	height: 100px;
+	background-image: url('/bible-on-a-wooden-desk.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	bottom: 0;
+}
+
+.subscribe__modal-close {
+	text-decoration: underline;
+	cursor: pointer;
+	display: inline-block;
+}
+
+/* table styles */
+table{
+  display: table;
+  table-layout: auto;
+  border: 1px
+  solid #ccc;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 10px;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table td{
+  border: 1px
+  solid #ababab;
+  padding: 0.4em;
+  background-clip: padding-box;
+}
+
+/* flex styling */
+.flex{
+  display: flex;
+}
+
+.flex-aic{
+  align-items: center;
+}
+
+.flex-jcsp{
+  justify-content: space-between;
+}
+
+/* width */
+.w-100{
+  width: 100%;
+}
+
+/* colors */
+
+.red{
+  fill: red;
+  cursor: pointer;
+}

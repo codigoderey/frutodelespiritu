@@ -1,0 +1,33 @@
+{
+  "name": "frutodelespiritu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.23",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "formidable": "^1.2.2",
+    "js-cookie": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.15",
+    "next": "^10.0.8",
+    "nodemailer": "^6.7.0",
+    "nookies": "^2.5.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-moment": "^1.1.1",
+    "shortid": "^2.2.16",
+    "slug": "^4.0.2",
+    "suneditor-react": "^2.14.4",
+    "validator": "^13.5.2"
+  }
+}
