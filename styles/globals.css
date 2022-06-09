@@ -283,7 +283,7 @@ blockquote p span {
 	display: flex;
 	align-items: center;
 	background-color: var(--main-accent);
-	height: 100vh;
+	height: calc(100vh - 56.91px);
 	background-image: url('/lens-flare.png');
 	background-position: top right;
 	background-size: contain;
@@ -332,7 +332,7 @@ blockquote p span {
 	.index-header {
 		flex-direction: column-reverse;
 		flex-basis: auto;
-		height: 100vh;
+		height: calc(100vh - 56.91px);
 	}
 
 	.index-header__left {
