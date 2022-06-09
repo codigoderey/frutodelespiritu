@@ -1,18 +1,17 @@
 import React from 'react';
-import BottonNav from './BottonNav';
+import Navigation from './Navigation';
 import Nav from './ContextNav';
-import Footer from "./Footer"
+import Footer from './Footer';
 
 const MainLayout = ({ children, usuario }) => {
-
-  return (
-    <div>
-      <Nav />
-      {children}
-      <BottonNav usuario={usuario} />
-      <Footer />
-    </div>
-  );
+	return (
+		<div>
+			<Navigation usuario={usuario} />
+			<Nav />
+			{children}
+			<Footer />
+		</div>
+	);
 };
 
 export default MainLayout;

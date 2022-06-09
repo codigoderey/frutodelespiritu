@@ -8,7 +8,11 @@ const privacidad = () => {
         <title>Política de privacidad de Fruto del Espíritu</title>
         <meta name="description" content="Conoce nuestra política de privacidad, tomamos muy en serio tu información." />
         <meta name="keywords" content="política de privacidad, privacidad fruto del espiritu" />
-        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Política de privacidad de Fruto del Espíritu" />
+        <meta property="og:description" content="Conoce nuestra política de privacidad, tomamos muy en serio tu información." />
+        <meta property="og:locale" content="es_US" />
+        <meta property="og:image" content="https://frutodelespiritu.com/logo.png" />
+        <meta property="og:url" content="https://frutodelespiritu.com/privacidad" />
       </Head>
       <LecturasHeader tema="Privacidad" />
       <article className="container p2">

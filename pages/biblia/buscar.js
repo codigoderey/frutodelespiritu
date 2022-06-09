@@ -32,7 +32,7 @@ const Resultados = () => {
 
       if (data.data.verses.length === 0) {
         setErrorStatus(true)
-        setErrorMessage("No se encontraron resultados")
+        setErrorMessage("No se encontraron resultados.")
         return
       }
       router.push('/biblia/buscar');
@@ -40,7 +40,7 @@ const Resultados = () => {
     } catch (error) {
       console.error(error.message);
       setErrorStatus(true)
-      setErrorMessage("Debes ingresar una búsqueda")
+      setErrorMessage("Debes ingresar una búsqueda.")
       setResultado([])
     }
   };
@@ -48,10 +48,14 @@ const Resultados = () => {
   return (
     <>
       <Head>
-        <title>Búsqueda de versículos bíblicos | Fruto del Espíritu</title>
-        <meta name="description" content="Realiza una búsqueda de versículos bíblicos y encuentra lo que buscas casi al instante." />
+        <title>Encuentra el versículo bíblico que buscas aquí | Fruto del Espíritu</title>
+        <meta name="description" content="Realiza una búsqueda de versículos bíblicos y encuentra lo que buscas al instante." />
         <meta name="keywords" content="busca versiculos en la biblia, encuentra versiculos biblicos, busca en la biblia" />
-        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Encuentra el versículo bíblico que buscas aquí | Fruto del Espíritu" />
+        <meta property="og:description" content="Realiza una búsqueda de versículos bíblicos y encuentra lo que buscas al instante." />
+        <meta property="og:locale" content="es_US" />
+        <meta property="og:image" content="https://frutodelespiritu.com/logo.png" />
+        <meta property="og:url" content="https://frutodelespiritu.com/biblia/buscar" />
       </Head>
       <div className="container search  mt3">
         <form className="flex" onSubmit={handleSearchSubmit}>

@@ -11,7 +11,7 @@ const Capitulos = ({ capitulos }) => {
         <title>Capítulos de la biblia | Fruto del Espíritu</title>
         <meta name="description" content="Capítulos del libro" />
         <meta name="keywords" content="busca versiculos en la biblia, encuentra versiculos biblicos, busca en la biblia" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <div className="container">
         <h1 className="biblia-header">Capítulos del libro de {libro}</h1>

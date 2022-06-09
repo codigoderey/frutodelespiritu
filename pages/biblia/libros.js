@@ -14,10 +14,14 @@ const Libros = ({ books }) => {
   return (
     <>
       <Head>
-        <title>Los libros de la biblia | Fruto del Espíritu</title>
-        <meta name="description" content="Conoce todos los libros de la biblia, desde Génesis hasta apocalipsis" />
+        <title>Los libros de la biblia Reina Valera 1960 | Fruto del Espíritu</title>
+        <meta name="description" content="Conoce todos los libros de la biblia, desde Génesis hasta apocalipsis." />
         <meta name="keywords" content="Estudia la biblia con nosotros. Fruto del Espíritu te ayuda vivir una vida práctica dirigida por el Espíritu Santo." />
-        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Los libros de la biblia | Fruto del Espíritu" />
+        <meta property="og:description" content="Conoce todos los libros de la biblia, desde Génesis hasta apocalipsis." />
+        <meta property="og:locale" content="es_US" />
+        <meta property="og:image" content="https://frutodelespiritu.com/logo.png" />
+        <meta property="og:url" content="https://frutodelespiritu.com/biblia/libros?id=592420522e16049f-01" />
       </Head>
       <div className="container">
         <h1 className="biblia-header">Libros del Antiguo Testamento</h1>

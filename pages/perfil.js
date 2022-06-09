@@ -150,9 +150,9 @@ const perfil = ({ usuario, lecturas }) => {
     <>
       <Head>
         <title>Perfil de {usuario.nombre} | Fruto del Espíritu</title>
-        <meta name="description" content={`Autor ${usuario.nombre} de Fruto del Espíritu | Perfil`} />
+        <meta name="description" content={`${usuario.nombre} - autor de Fruto del Espíritu | Perfil`} />
         <meta name="keywords" content="autor cristiano, escritor cristiano, escritor de fe, fe cristiana, autor sobre la fe" />
-        <meta name="robots" content="index, follow" />
+        <meta name='robots' content='noindex, nofollow' />
       </Head>
       <PerfilHeader nombreUsuario={usuario.nombre} updatedAt={usuario.createdAt} correo={usuario.correo} />
       <section className="container-fluid">

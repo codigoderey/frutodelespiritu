@@ -1,14 +1,3 @@
-// var refTagger = {
-//   settings: {
-//     bibleVersion: "RVR60"
-//   }
-// };
-// (function (d, t) {
-//   var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-//   g.src = "//api.reftagger.com/v2/RefTagger.es.js";
-//   s.parentNode.insertBefore(g, s);
-// }(document, "script"));
-
 var refTagger = {
   settings: {
     bibleVersion: "RVR60",

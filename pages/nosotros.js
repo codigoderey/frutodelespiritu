@@ -6,9 +6,13 @@ const nosotros = () => {
   return (
     <>
       <Head>
-        <title>Ministerio decidido a llevar el mensaje de una vida práctica en el Espíritu Santo | Fruto del Espíritu</title>
-        <meta name="description" content="Somos un ministerio decidido a llevar el mensaje de una vida práctica dirigida por el Espíritu Santo." />
-        <meta name="robots" content="index, follow" />
+        <title>Fruto del Espíritu - ministerio cristiano en línea.</title>
+        <meta name="description" content="Utiliza nuestras reflexiones para meditar sobre la Palabra de Dios o entra más profunto al conocimiento de Dios a través de los Estudios Bíblicos." />
+        <meta property="og:title" content="Fruto del Espíritu - ministerio cristiano en línea." />
+        <meta property="og:description" content="Utiliza nuestras reflexiones para meditar sobre la Palabra de Dios o entra más profunto al conocimiento de Dios a través de los Estudios Bíblicos." />
+        <meta property="og:locale" content="es_US" />
+        <meta property="og:image" content="https://frutodelespiritu.com/logo.png" />
+        <meta property="og:url" content="https://frutodelespiritu.com/nosotros" />
       </Head>
       <LecturasHeader tema="Sobre nosotros" />
       <article className="container p2">

@@ -1,22 +1,19 @@
-import baseURL from "../utils/baseURL"
 import Head from "next/head"
 import IndexHeader from "../components/Headers/IndexHeader"
-const Home = () => {
 
+const Home = () => {
   return (
     <>
       <Head>
-        <title>Bienvenidos a Fruto del Espíritu</title>
-        <meta name="description" content="Estudios Bíblicos y Lecturas relacionadas al ministerio de Jesucristo, llamados a vivir una vida práctica dirigidos por el Espíritu Santo." />
-        <meta name="robots" content="index, follow" />
+        <title>Fruto del Espíritu - tu recurso de reflexiones y estudios bíblicos</title>
+        <meta name="description" content="Utiliza nuestras reflexiones para meditar sobre la Palabra de Dios o entra más profunto al conocimiento de Dios a través de los Estudios Bíblicos." />
+        <meta property="og:title" content="Fruto del Espíritu - tu recurso de reflexiones y estudios bíblicos" />
+        <meta property="og:description" content="Utiliza nuestras reflexiones para meditar sobre la Palabra de Dios o entra más profunto al conocimiento de Dios a través de los Estudios Bíblicos." />
+        <meta property="og:locale" content="es_US" />
+        <meta property="og:image" content="https://frutodelespiritu.com/logo.png" />
+        <meta property="og:url" content="https://frutodelespiritu.com/lecturas" />
       </Head>
       <IndexHeader />
-      {/* <header className="bg-bible-1">
-        {baseURL === "http://localhost:3000" && <p className="alert-red">Recuerda utilizar la base de datos de prueba y cambiarla a la de producción cuando publiques la página. Además acuérdate de comentar el reftagger para limpiar el error de la consola.</p>}
-        <div className="home-text">
-          <h1>Fruto del Espíritu</h1>
-        </div>
-      </header> */}
     </>
   );
 };

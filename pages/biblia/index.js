@@ -8,10 +8,14 @@ const BibliaIndex = (data) => {
   return (
     <>
       <Head>
-        <title>Lee la biblia | Fruto del Espíritu</title>
-        <meta name="description" content="Estudia las escrituras, la biblia con nosotros" />
+        <title>Lee la biblia Reina Valera 1960 | Fruto del Espíritu</title>
+        <meta name="description" content="Estudia las escrituras, lee la biblia con nosotros | Fruto del Espíritu" />
         <meta name="keywords" content="Estudia la biblia con nosotros. Fruto del Espíritu te ayuda vivir una vida práctica dirigida por el Espíritu Santo." />
-        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Lee la biblia Reina Valera 1960 | Fruto del Espíritu" />
+        <meta property="og:description" content="Estudia las escrituras, lee la biblia con nosotros | Fruto del Espíritu" />
+        <meta property="og:locale" content="es_US" />
+        <meta property="og:image" content="https://frutodelespiritu.com/logo.png" />
+        <meta property="og:url" content="https://frutodelespiritu.com/biblia/" />
       </Head>
       <div className="container">
         <h1 className="biblia-header">Biblias Disponibles</h1>

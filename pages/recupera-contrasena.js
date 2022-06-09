@@ -9,7 +9,7 @@ const recuperaContrasena = () => {
     <>
       <Head>
         <title>Recupera tu contraseńa | Fruto del Espíritu</title>
-        <meta name="robots" content="index, follow" />
+        <meta name="description" content="Si olvidaste tu contraseña, puedes recuperarla en este enlace." />
       </Head>
       <LecturasHeader tema="Recupera tu contraseña" />
       <RecuperarContrasena />

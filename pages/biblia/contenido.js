@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Link from 'next/link';
+import Head from "next/head"
 
 
 const Capitulos = ({ contenido }) => {
@@ -9,26 +10,32 @@ const Capitulos = ({ contenido }) => {
   const referencia = contenido.data.reference;
 
   return (
-    <div className="container">
-      <h1 className="biblia-contenido-header">{referencia}</h1>
-      <div className="p2" dangerouslySetInnerHTML={{ __html: lectura }} />
-      <div className="pagination">
-        {data.previous && (
-          <Link
-            href={`/biblia/contenido?biblia=592420522e16049f-01&capitulo=${data.previous.id}`}
-          >
-            <a className="btn-link">Anterior</a>
-          </Link>
-        )}
-        {data.next && (
-          <Link
-            href={`/biblia/contenido?biblia=592420522e16049f-01&capitulo=${data.next.id}`}
-          >
-            <a className="btn-link">Siguiente</a>
-          </Link>
-        )}
+    <>
+      <Head>
+        <title>Contenido | Fruto del Espíritu</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div className="container">
+        <h1 className="biblia-contenido-header">{referencia}</h1>
+        <div className="p2" dangerouslySetInnerHTML={{ __html: lectura }} />
+        <div className="pagination">
+          {data.previous && (
+            <Link
+              href={`/biblia/contenido?biblia=592420522e16049f-01&capitulo=${data.previous.id}`}
+            >
+              <a className="btn-link">Anterior</a>
+            </Link>
+          )}
+          {data.next && (
+            <Link
+              href={`/biblia/contenido?biblia=592420522e16049f-01&capitulo=${data.next.id}`}
+            >
+              <a className="btn-link">Siguiente</a>
+            </Link>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

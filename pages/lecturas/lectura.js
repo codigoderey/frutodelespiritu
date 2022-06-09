@@ -9,8 +9,6 @@ import Head from "next/head"
 import Link from "next/link"
 
 const lectura = ({ lectura, usuario }) => {
-  console.log(lectura)
-  console.log(usuario)
 
   const { updatedAt, publicadoPor, contenido } = lectura
 
@@ -54,7 +52,7 @@ const lectura = ({ lectura, usuario }) => {
         action: "removerlibro"
       };
 
-      const { data } = await axios.put(url, payload);
+      await axios.put(url, payload);
       setBookmark((bookmark) => !bookmark);
 
     } catch (error) {
@@ -68,6 +66,11 @@ const lectura = ({ lectura, usuario }) => {
         <title>{lectura.titulo} | Fruto del Espíritu</title>
         <meta name="description" content={lectura.resumen} />
         <meta name="keywords" content="estudios biblicos, estudia la biblia, entiende la biblia, espiritu santo" />
+        <meta property="og:title" content={`${lectura.titulo} | Fruto del Espíritu`} />
+        <meta property="og:description" content={lectura.resumen} />
+        <meta property="og:locale" content="es_US" />
+        <meta property="og:image" content="https://frutodelespiritu.com/logo.png" />
+        <meta property="og:url" content={`${baseURL}/lecturas/lectura?slug=${lectura.slug}`} />
       </Head>
       <LecturaTemplateHeader updatedAt={updatedAt} escritoPor={publicadoPor.nombre} usuarioId={publicadoPor._id} />
       <div className="container-full p2">

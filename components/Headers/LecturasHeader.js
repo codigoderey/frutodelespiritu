@@ -1,11 +1,14 @@
 import React from 'react'
 
-const LecturasHeader = ({ tema }) => {
+const LecturasHeader = ({ tema, imgSrc }) => {
   return (
     <header className="lecturas-header">
-      {/* remember to change the image source to the dinamyc one and not to a background one */}
-      <h1>{tema}</h1>
-
+      {imgSrc &&
+        <img src={imgSrc} />
+      }
+      <div className="lecturas-header-overlay">
+        <h1>{tema}</h1>
+      </div>
     </header>
   )
 }

@@ -6,7 +6,6 @@ import axios from 'axios'
 import Head from "next/head"
 
 const perfil = ({ perfil }) => {
-
   const [lecturas, setLecturas] = useState([])
 
   const lecturasPublicadas = lecturas.filter(l => l.publicadoPor.nombre === perfil.nombre)
@@ -27,6 +26,12 @@ const perfil = ({ perfil }) => {
         <title>Perfil de {perfil.nombre} | Fruto del Espíritu</title>
         <meta name="description" content={`Perfil de ${perfil.nombre} en Fruto del Espíritu, lecturas que edifican al pueblo cristiano.`} />
         <meta name="keywords" content="estudios biblicos, estudia la biblia, entiende la biblia, espiritu santo" />
+        <meta property="og:title" content={`Perfil de ${perfil.nombre} | Fruto del Espíritu`} />
+        <meta property="og:description" content={`Perfil de ${perfil.nombre} en Fruto del Espíritu, lecturas que edifican al pueblo cristiano.`} />
+        <meta property="og:locale" content="es_US" />
+        <meta property="og:image" content="https://frutodelespiritu.com/logo.png" />
+        <meta property="og:url" content={`${baseURL}/usuario?id=${perfil._id}`} />
+
       </Head>
       <PerfilHeader tema={perfil.nombre} updatedAt={perfil.createdAt} mail={perfil.correo} />
       <section className="container-fluid">
